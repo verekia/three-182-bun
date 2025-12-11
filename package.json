@@ -1,5 +1,5 @@
 {
-  "name": "three-182-server-gpu-bug",
+  "name": "three-182-bun",
   "module": "index.ts",
   "type": "module",
   "private": true,
