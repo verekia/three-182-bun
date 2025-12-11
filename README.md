@@ -34,7 +34,7 @@ TypeError: undefined is not an object (evaluating 'GPUShaderStage.VERTEX')
 
 The `patch` branch provides and fix reproduction, which is a Bun patch:
 
-```git
+```diff
 -const GPUShaderStage = ( typeof self !== 'undefined' ) ? self.GPUShaderStage : { VERTEX: 1, FRAGMENT: 2, COMPUTE: 4 };
 +const GPUShaderStage = ( typeof self !== 'undefined' && self.GPUShaderStage ) ? self.GPUShaderStage : { VERTEX: 1, FRAGMENT: 2, COMPUTE: 4 };
 ```
