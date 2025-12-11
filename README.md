@@ -1,22 +1,15 @@
 # three-182-server-gpu-bug
 
-To install dependencies:
-
-```bash
-bun install
-```
-
 To run:
 
 ```bash
-bun test
+bun install
+bun index.js
 ```
 
-index.test.ts:
+Error:
 
-```
-# Unhandled error between tests
--------------------------------
+```bash
 73269 |         [ ClampToEdgeWrapping ]: 'clamp',
 73270 |         [ MirroredRepeatWrapping ]: 'mirror'
 73271 | };
@@ -25,4 +18,7 @@ index.test.ts:
 73274 |         'vertex': GPUShaderStage.VERTEX,
                    ^
 TypeError: undefined is not an object (evaluating 'GPUShaderStage.VERTEX')
+      at /Users/verekia/Local/Code/three-182-server-gpu-bug/node_modules/three/build/three.webgpu.js:73274:12
+      at loadAndEvaluateModule (2:1)
+
 ```
