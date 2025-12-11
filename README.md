@@ -1,10 +1,17 @@
 # three-182-server-gpu-bug
 
-To run:
+To run if Bun is installed:
 
 ```bash
 bun install
 bun index.js
+```
+
+To run with Docker:
+
+```bash
+docker build -t three-182-server-gpu-bug .
+docker run -it three-182-server-gpu-bug
 ```
 
 Error:
