@@ -9,5 +9,8 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/three": "0.182.0"
+  },
+  "patchedDependencies": {
+    "three@0.182.0": "patches/three@0.182.0.patch"
   }
 }
